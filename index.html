@@ -15,9 +15,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, black, white);
-    transition: background 0.5s ease;
+    background: linear-gradient(135deg, #000, #ddd, #333);
+    background-size: 400% 400%;
+    animation: gradientAnimation 2s infinite linear; /* Changed animation duration to 5 seconds */
   }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
   h1 {
     margin-bottom: 20px;
   }
@@ -27,7 +38,7 @@
     margin-bottom: 30px;
   }
   #countdown-btn {
-    background-color: #000000;
+    background-color: #333;
     color: #fff;
     border: none;
     padding: 6px 15px;
@@ -35,9 +46,18 @@
     cursor: pointer;
     margin-bottom: 10px; 
   }
-
   #spotify-btn {
-    background-color: #000000;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+    margin-bottom: 10px;
+  }
+  #instagram-btn {
+    background-color: #333;
     color: #fff;
     border: none;
     padding: 6px 15px;
@@ -49,9 +69,9 @@
 </head>
 <body>
   <h1>About Me</h1>
-  <p><b>I'm a student living in Alba Iulia, and I'm passionate about studying HTML, CSS, and JavaScript</b></p>
-  
+  <p><b>I'm a student living in Alba Iulia, and I'm passionate about studying HTML, CSS, and JavaScript.</b></p>
   <button id="countdown-btn" onclick="window.location.href='birthday.html'"><b>Birthday Countdown</b></button>
   <a id="spotify-btn" href="https://open.spotify.com/playlist/4jigTIDhNmwvcIJQTZpNoL?si=7f75c2d434314a36"><b>Spotify</b></a>
+  <a id="instagram-btn" href="https://instagram.com/trcasian/"><b>Instagram</b></a>
 </body>
 </html>
